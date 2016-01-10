@@ -1,0 +1,8 @@
+---
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.security: ERROR
+    org.springframework.boot.autoconfigure: INFO
+    org.hibernate.SQL: INFO
+---

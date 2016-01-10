@@ -1,0 +1,35 @@
+---
+spring:
+  application:
+    name: Secured App
+    index: 80
+  profiles:
+    active: dev,dev_info
+---
+security:
+  basic:
+    enabled: false
+  ignored: /css/**,/js/**,/console/**,/i18n/**,/login**
+---
+
+logging:
+  level:
+    ROOT: ERROR
+
+---
+#wro4j:
+#  preProcessors: cssUrlRewriting,cssImport,semicolonAppender,lessCss
+#  postProcessors: cssVariables,cssMinJawr,jsMin
+#  resourceWatcherUpdatePeriod: 1
+#  ignoreMissingResources: false
+#---
+wro4j:
+  disableCache: false
+  debug: true
+  cacheUpdatePeriod: 5
+  resourceWatcherUpdatePeriod: 1
+  urlPattern: /assets/*
+  cacheGzippedContent: true
+  parallelProcessing: true
+  preProcessors: cssUrlRewriting,cssImport,semicolonAppender
+  postProcessors: cssVariables,cssMinJawr,jsMin

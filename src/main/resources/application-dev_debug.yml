@@ -1,0 +1,10 @@
+---
+debug: true
+---
+logging.level:
+    org.springframework.ROOT: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.boot.autoconfigure: ERROR
+    org.hibernate.SQL: ERROR
+    de.infinit.spring.boot.autoconfigure.wro4j: DEBUG
+---
